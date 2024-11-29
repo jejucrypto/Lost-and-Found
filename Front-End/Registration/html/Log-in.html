@@ -5,7 +5,7 @@
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Lost & Found System</title>
-                <link rel="stylesheet" href="/Registration/css/forgot-pass.css">
+                <link rel="stylesheet" href="/Front-End/Registration/css/log-in.css">
                 
                 
         </head>
@@ -13,7 +13,7 @@
                   <header>
                         <nav class="navbar">
                               <div class="logo">
-                                    <img class="logo-image" src="/Reference/ctu-danao-logo.png" alt="CTU-Logo">
+                                    <img class="logo-image" src="/Front-End/Reference/ctu-danao-logo.png" alt="CTU-Logo">
                                     <div>
                                           <p class="school-ctu">Cebu Technological University</p>
                                           <p class="school-ctu">Danao Campus</p>
@@ -29,22 +29,34 @@
                   </header>
            
 
-            <div class="forgot-pass-container">                             <!--Forgot Pass-->
-                    <div>
-                      <h1 class="forgot-pass-txt">Forgot Password</h1>
+              <div class="log-in-container">                             <!--SIGN UP-->
+                    <div class="log-in-acc">
+                      <h1 class="log-in-acc-txt">Log-in</h1>
                     </div>
-                    
+                    <div>
+                        <p>No account?<a class="sign-up-link" href="/Registration/html/Create_account.html">Sign-up</a></p>
+                    </div>
                    
-                    <div  class="Email-container">
-                          <p class="Email-txt">E-mail:</p>  
+                    <div  class="Email">
+                          <p>Email</p>  
                           <input  class="email-input"placeholder="ex.hello@reallygreatsite.com">
                     </div>
-                  
-                     
-                     <div class="Enter">
-                            <button class="Enter-button">Send</button>
+                    <div  class="Password">
+                          <p>Password</p>  
+                          <input  class="password-input"placeholder="Enter your password">
                      </div>
-    
+                     
+                     <div class="Log-in">
+                            <button class="Log-in-button">Login</button>
+                     </div>
+                     <div class="google-sign-in">
+                        <button class="google-sign-in-button">Login with Google account</button>
+                    </div>
+                   
+                        <a class="forgot-pass" href="/Registration/html/Forgot-password.html">
+                              Forgot Password
+                        </a>
+                   
                 </div>
         </body>
 </html>

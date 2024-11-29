@@ -8,7 +8,7 @@
 
 body{
       height: 100vh;
-      background: url(/Reference/ctu-danao-campus.jpg) no-repeat;
+      background: url(/Front-End/Reference/ctu-danao-campus.jpg) no-repeat;
       background-size: 100% 50%;
       background-position:top;
       display: flex;     

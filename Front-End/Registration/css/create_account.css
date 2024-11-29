@@ -8,7 +8,7 @@
 
 body{
       height: 100vh;
-      background: url(/Reference/ctu-danao-campus.jpg) no-repeat;
+      background: url(/Front-End/Reference/ctu-danao-campus.jpg) no-repeat;
       background-size: cover;
       background-position: center;
       display: flex;     
@@ -34,59 +34,58 @@ header{
       padding: 10px 50px;     
       
   }
-  .logo{
-    display: flex;
-    vertical-align: center;
-    align-items: center;
+.logo{
+      display: flex;
+      vertical-align: center;
+      align-items: center;
 }
 .school-ctu{
-    margin: 0;
-    font-weight: 600;
-    color:  rgb(255, 255, 255);
+      margin: 0;
+      font-weight: 600;
+      color:  rgb(255, 255, 255);
 }
 
 .logo img {
-    height: 50px; 
-    width: auto;
-    cursor: pointer;
-    margin-right: 18px;
-   
+      height: 50px; 
+      width: auto;
+      cursor: pointer;
+      margin-right: 18px;
+     
 }
-.log-in-container{
+.sign-up-container{
       display: flex;     
       justify-content: center;
       align-items: center;
       flex-direction: column;     
       border-radius: 10px;
       background-color: rgb(40, 40, 40);    
-      height: 600px;
+      height: 650px;
       width: 500px;
       color: white;    
 }
-.log-in-acc-txt{
+.create-new-acc-txt{
       margin-bottom:0px;
       font-size: 2em;
       color:rgb(255, 255, 255);
 }
-.sign-up-link{
+.log-in-page{      
       margin-left: 8px;
       color: blue;
       text-decoration:none;
       transition: color 0.3s;
 }
-.sign-up-link:hover{
+.log-in-page:hover{
       color:white;
 }
-.email-input,.password-input{
+.name-input,.email-input,.password-input,.date-input{
       padding: 15px 15px;
       font-size:16px;
       width:250px;
 }
-.Log-in{
+.Sign-up{
       margin-top: 30px;
 }
-
-.Log-in-button{
+.sign-up-button{
       border:none;
       border-radius:7px ;
       background-color: rgb(249, 166, 2);
@@ -98,40 +97,8 @@ header{
       cursor: pointer;
       transition: color 0.3s;
 }
-.Log-in-button:hover{
-  background-color: white;
-  color:  rgb(249, 166, 2);
-  font-weight: bold;
-  border: 1px solid rgb(249, 166, 2) ;
- 
-}
-.google-sign-in-button{
-  border:none;
-  background-color: rgb(249, 166, 2);
-  padding: 15px 15px;
-  font-size: 18px;
-  color:white;
-  font-weight: bold;
-  width:auto;
-  cursor: pointer;
-  margin-top: 20px;
-  border-radius:7px ;
-  transition: color 0.3s ;
-
-}
-.google-sign-in-button:hover{
-  background-color: white;
-  color:  rgb(249, 166, 2);
-  border: 1px solid rgb(249, 166, 2) ;
- 
-}
-
-.forgot-pass{
-  margin-top:15px;
-  color: blue;
-  text-decoration:none;
-  transition: color 0.3s;
-}
-.forgot-pass:hover{
-      color:white;
+.sign-up-button:hover{
+      background-color: white;
+      color: rgb(249, 166, 2);
+      border: 2px solid rgb(249, 166, 2) ;
 }
