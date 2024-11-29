@@ -72,6 +72,7 @@ header{
       margin-left: 8px;
       color: blue;
       text-decoration:none;
+      transition: color 0.3s;
 }
 .log-in-page:hover{
       color:white;
@@ -94,6 +95,7 @@ header{
       font-weight: bold;
       width:120px;
       cursor: pointer;
+      transition: color 0.3s;
 }
 .sign-up-button:hover{
       background-color: white;

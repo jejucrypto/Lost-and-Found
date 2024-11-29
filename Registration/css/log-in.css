@@ -87,6 +87,7 @@ header{
       font-weight: bold;
       width:120px;
       cursor: pointer;
+      transition: color 0.3s;
 }
 .Log-in-button:hover{
   background-color: white;
@@ -105,9 +106,14 @@ header{
   cursor: pointer;
   margin-top: 20px;
   border-radius:7px ;
+  transition: color 0.3s ;
+  
+ 
+  
 }
 .google-sign-in-button:hover{
   background-color: white;
   color:  rgb(249, 166, 2);
   border: 2px solid rgb(249, 166, 2) ;
+ 
 }

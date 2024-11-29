@@ -1,69 +1,61 @@
+* {
+  box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  padding: 10px 20px;
-}
-
-.logo img {
-  height: 40px; /* Adjust height as needed */
-  width: auto; /* Maintain aspect ratio */
+  margin-top: 10px;
 }
 
 .nav-links {
   list-style: none;
-  display: flex;
-  margin: 0;
   padding: 0;
 }
 
 .nav-links li {
-  margin-left: 20px;
+  display: inline;
+  margin: 0 15px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: white;
-  padding: 8px 15px;
-  transition: background-color 0.3s;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  background-color: #555;
+  color: #ff6347; /* Change color on hover */
+}
+
+.main-content {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .nav-links {
-      flex-direction: column;
-      display: none; /* Hide links by default */
-      position: absolute;
-      top: 60px; /* Adjust based on navbar height */
-      left: 0;
-      right: 0;
-      background-color: #333;
-  }
-
-  .nav-links.active {
-      display: flex; /* Show links when active */
-  }
-
-  .navbar .toggle {
-      display: block; /* Show toggle button */
-      cursor: pointer;
-  }
-}
-
-/* Toggle Button */
-.toggle {
-  display: none; /* Hide on larger screens */
-  font-size: 24px;
+.footer {
+  background-color: #333;
   color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
