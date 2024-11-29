@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sample.css"> <!-- Link to your CSS file -->
+    <title>Navigation Bar with Image</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="path/to/your/logo.png" alt="MyWebsite Logo" /> <!-- Replace with your image path -->
+        </div>
+        <div class="toggle" onclick="toggleNavbar()">☰</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <h1>Welcome to My Website</h1>
+    </section>
+    <section id="about">
+        <h1>About Us</h1>
+    </section>
+    <section id="services">
+        <h1>Our Services</h1>
+    </section>
+    <section id="contact">
+        <h1>Contact Us</h1>
+    </section>
+
+    <script>
+        function toggleNavbar() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

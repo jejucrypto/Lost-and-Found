@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+
+body{
+      height: 100vh;
+      background: url(/Reference/ctu-danao-campus.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;     
+      justify-content: center;
+      align-items: center;
+      font-family: 'Montserrat', sans-serif; 
+      padding-top: 100px;
+      padding-bottom: 30px;
+      
+}
+header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      
+}
+.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(249, 166, 2);
+      padding: 10px 50px;     
+      
+  }
+.logo{
+      display: flex;
+      vertical-align: center;
+      align-items: center;
+}
+.school-ctu{
+      margin: 0;
+      font-weight: 600;
+      color:  rgb(255, 255, 255);
+}
+
+.logo img {
+      height: 50px; 
+      width: auto;
+      cursor: pointer;
+      margin-right: 18px;
+     
+}
+.sign-up-container{
+      display: flex;     
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;     
+      border-radius: 10px;
+      background-color: rgb(40, 40, 40);    
+      height: 650px;
+      width: 500px;
+      color: white;    
+}
+.create-new-acc-txt{
+      margin-bottom:0px;
+      font-size: 2em;
+      color:rgb(255, 255, 255);
+}
+.log-in-page{      
+      margin-left: 8px;
+      color: blue;
+      text-decoration:none;
+}
+.log-in-page:hover{
+      color:white;
+}
+.name-input,.email-input,.password-input,.date-input{
+      padding: 15px 15px;
+      font-size:16px;
+      width:250px;
+}
+.Sign-up{
+      margin-top: 30px;
+}
+.sign-up-button{
+      border:none;
+      border-radius:7px ;
+      background-color: rgb(249, 166, 2);
+      padding: 15px 15px;
+      font-size: 18px;
+      color: white;
+      font-weight: bold;
+      width:120px;
+      cursor: pointer;
+}
+.sign-up-button:hover{
+      background-color: white;
+      color: rgb(249, 166, 2);
+      border: 2px solid rgb(249, 166, 2) ;
+}
