@@ -23,18 +23,17 @@ header{
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      
+      width: 100%;     
 }
 .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: rgb(249, 166, 2);
-      padding: 10px 50px;     
-      
-  }
-  .logo{
+      padding: 10px 50px;          
+}
+
+.logo{
     display: flex;
     vertical-align: center;
     align-items: center;
@@ -50,43 +49,43 @@ header{
     width: auto;
     cursor: pointer;
     margin-right: 18px;
-   
 }
-.log-in-container{
+
+.forgot-pass-container{
       display: flex;     
       justify-content: center;
       align-items: center;
       flex-direction: column;     
       border-radius: 10px;
       background-color: rgb(40, 40, 40);    
-      height: 600px;
+      height: 520px;
       width: 500px;
       color: white;    
 }
-.log-in-acc-txt{
-      margin-bottom:0px;
+
+.forgot-pass-txt{
+      margin-bottom:20px;
       font-size: 2em;
       color:rgb(255, 255, 255);
 }
-.sign-up-link{
-      margin-left: 8px;
-      color: blue;
-      text-decoration:none;
-      transition: color 0.3s;
+.Email-container{
+      
+      display:flex;
+      flex-direction: column; 
+      vertical-align: center;
+      margin-top: 20px;  
 }
-.sign-up-link:hover{
-      color:white;
-}
-.email-input,.password-input{
+
+.email-input{
       padding: 15px 15px;
       font-size:16px;
       width:250px;
 }
-.Log-in{
+.Enter{
       margin-top: 30px;
 }
 
-.Log-in-button{
+.Enter-button{
       border:none;
       border-radius:7px ;
       background-color: rgb(249, 166, 2);
@@ -98,40 +97,10 @@ header{
       cursor: pointer;
       transition: color 0.3s;
 }
-.Log-in-button:hover{
+.Enter-button:hover{
   background-color: white;
   color:  rgb(249, 166, 2);
   font-weight: bold;
   border: 1px solid rgb(249, 166, 2) ;
  
-}
-.google-sign-in-button{
-  border:none;
-  background-color: rgb(249, 166, 2);
-  padding: 15px 15px;
-  font-size: 18px;
-  color:white;
-  font-weight: bold;
-  width:auto;
-  cursor: pointer;
-  margin-top: 20px;
-  border-radius:7px ;
-  transition: color 0.3s ;
-
-}
-.google-sign-in-button:hover{
-  background-color: white;
-  color:  rgb(249, 166, 2);
-  border: 1px solid rgb(249, 166, 2) ;
- 
-}
-
-.forgot-pass{
-  margin-top:15px;
-  color: blue;
-  text-decoration:none;
-  transition: color 0.3s;
-}
-.forgot-pass:hover{
-      color:white;
 }
