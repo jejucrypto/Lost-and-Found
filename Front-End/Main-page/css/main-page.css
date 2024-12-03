@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(/Front-End/Reference/ctu-danao-campus.jpg) no-repeat;
+    background-size: 100% 63%;
+    background-position: top;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Section */
+section {}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(249, 166, 2);
+    padding: 10px 50px;
+
+}
+
+.logo {
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+}
+
+.school-ctu {
+    margin: 0;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+    margin-right: 18px;
+}
+
+/*Slides*/
+.container {
+    margin-top: 200px;
+    border-radius: 15px;
+    padding-top: 30px;
+}
+
+.card-list .card-item .card-link {
+    user-select: none;
+    display: block;
+    background-color: #282828;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+    transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link:active {
+    cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover {
+    border-color: #ffcc00;
+}
+
+.card-list .card-item {
+    list-style: none;
+}
+
+.card-list .card-item .card-link .item-lost-name {
+    font-size: 100px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.card-list .card-link .click-for-more {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+.card-list .card-link:hover .click-for-more {
+    color: #ffcc00;
+    transition: 0.4s ease;
+}
+
+.card-wrapper {
+    max-width: 1000px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #ffcc00;
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+    color: #ffcc00;
+    margin-top: -35px;
+}
+
+/*End of Header*/
+
+
+
+/* Responsive Design */
+@media screen and (max-width:768px) {
+    .card-wrapper {
+        margin: 0 10px 25px;
+
+    }
+
+    .card-wrapper .swiper-slide-button {
+        display: none;
+    }
+}
