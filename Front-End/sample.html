@@ -3,42 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid</title>
+    <title>Real-Time Date</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            height: 100vh;
             background-color: #f0f0f0;
+            margin: 0;
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 10px;
-        }
-
-        .grid-item {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 5px;
-            color: white;
+        .date-container {
             text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .date-container p {
+            margin: 5px 0 0;
+            font-size: 24px;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <div class="grid">
-        <div class="grid-item">1</div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item">6</div>
-        <div class="grid-item">7</div>
-        <div class="grid-item">8</div>
-        <div class="grid-item">9</div>
+
+    <div class="date-container">
+        <p id="date"></p>
     </div>
+
+    <script>
+        // Function to update the current date
+        function updateCurrentDate() {
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = today.toLocaleDateString('en-US', options);
+
+            // Get the date element
+            const dateElement = document.getElementById('date');
+
+            // Set the text content
+            dateElement.textContent = formattedDate;
+        }
+
+        // Call the function to display the date initially
+        updateCurrentDate();
+
+        // Update the date every second (1000 milliseconds)
+        setInterval(updateCurrentDate, 1000);
+    </script>
+
 </body>
 </html>

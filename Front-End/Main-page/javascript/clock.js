@@ -6,6 +6,7 @@ function updateClock() {
   
   const timeString = `${hours}:${minutes}:${seconds}`;
   document.getElementById('clock').textContent = timeString;
+  console.log(now);
 }
 
 // Update the clock immediately and then every second
