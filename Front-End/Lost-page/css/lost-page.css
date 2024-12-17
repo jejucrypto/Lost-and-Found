@@ -17,12 +17,8 @@ a{
     transition: 0.3s;
 }
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient();
+    height: 100vh;
+    padding-top:100px ;
 }
 
 /* Header*/
@@ -35,7 +31,7 @@ header {
 }
 
 /* Background */
-.background-ctu{
+/* .background-ctu{
     background: url(/Front-End/Reference/ctu-danao-campus.jpg) no-repeat;
     background-size: 100% 63%;
     background-position: top;
@@ -44,7 +40,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -75,27 +71,6 @@ header {
     cursor: pointer;
     margin-right: 18px;
 }
-.dropdown{
-    display: none;
-    position: absolute;
-    top: 100%; 
-    left: 0;
-    background-color: rgb(249, 166, 2);
-    list-style: none;
-    padding: 10px 0;
-    border-radius: 5px;
-    z-index: 1000;
-}
-
 /*End of Header*/
 
 
-/* Responsive Design */
-@media screen and (max-width:768px) {
-    .card-wrapper {
-        margin: 0 10px 25px;
-    }
-    .card-wrapper .swiper-slide-button {
-        display: none;
-    }
-}

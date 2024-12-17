@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  position: relative; /* Needed for dropdown positioning */
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  display: none; /* Hide dropdown by default */
+  position: absolute; /* Position it relative to the parent */
+  top: 100%; /* Position it below the parent */
+  left: 0;
+  background-color: #333;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.nav-links li:hover .dropdown {
+  display: block; /* Show dropdown on hover */
+}
+
+.dropdown li {
+  margin: 0; /* Remove margin for dropdown items */
+}
+
+.dropdown a {
+  padding: 10px 20px; /* Add padding for dropdown items */
+  display: block; /* Make the entire area clickable */
+}
+
+.dropdown a:hover {
+  background-color: #555; /* Change background on hover */
+}

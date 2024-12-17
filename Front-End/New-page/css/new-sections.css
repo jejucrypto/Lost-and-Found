@@ -1,0 +1,123 @@
+/* WHOLE SECTION */
+.whole-section {
+  display: flex; 
+  height: calc(100vh - 100px);
+  margin-left: 80px;
+}
+
+.wrapper-sections {
+  flex: 3; 
+  padding: 20px;
+  overflow-y: auto; /* Allow vertical scrolling */
+  height: 100%;
+}
+
+.wrapper-sections::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar for WebKit browsers */
+}
+
+.wrapper-sections {
+  scrollbar-width: none; 
+}
+
+.right-section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  position: relative;
+  right: 20px;
+}
+
+.right-section .searchbar {
+  flex: 1;
+  position: relative;
+}
+
+.right-section .searchbar .search-item {
+  display: block;
+  background-color: #F9A602;
+  padding: 3px 20px 3px 10px;
+  border-radius: 0;
+}
+
+.right-section .searchbar .search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  width: 50px;
+  height: 50%;
+  background: none;
+  cursor: pointer; 
+}
+
+.right-section .searchbar .search-button i {
+  color: #6a6d71;
+}
+
+.right-section .searchbar .search-button i:hover {
+  color: #3a53c3;
+}
+
+.wrapper {
+  width: fit-content;
+  height: 100vh;
+  margin-bottom: 350px;
+}
+
+.section-container {
+  margin: 0px;
+  width: auto; 
+}
+
+.section-container .boxes-outer-container {
+  display: flex;
+  margin-top: 30px;
+}
+
+.txt-container {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.txt {
+  color: #2c3b80;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.boxes-container {                       
+  background-color: #282828;
+  border-radius: 10px;
+  margin-right: 30px;
+  height: 350px;
+  width: 300px;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boxes-container:hover {
+  border: 2px solid #F9A602;
+  transition: 0.3s;
+}
+
+.boxes-container .item-lost-name {
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.line {
+  height: 25px;
+  width: 5px;
+  background-color: #F9A602; 
+  margin-right: 10px;
+}
