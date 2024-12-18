@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Click Overlay Example</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Simple Navigation Bar</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">MyLogo</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li>
-                    <a href="#">Services</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">App Development</a></li>
-                        <li><a href="#">SEO Services</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <div class="card" id="card">
+            <h2>Click Me!</h2>
+            <p>This is a card. Click to reveal more content.</p>
+        </div>
+        <div class="overlay" id="overlay">
+            <div class="overlay-content">
+                <h3>Additional Content</h3>
+                <p>This content is revealed when you click the card. It can contain any information you want!</p>
+                <button id="close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
