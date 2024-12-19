@@ -34,7 +34,8 @@
 
                   </div>
                   <div class="right-side-nav">
-                        <div class="home me-5"><a href="" class="nav-link">HOME</a></div>
+                        <div class="home me-5"><a href="" class="nav-link"><i class="fa-solid fa-house fs-5"></i></a>
+                        </div>
 
                         <div class="items me-5"><a href="" class="nav-link">ITEMS &#x25BC;</a>
 
@@ -46,10 +47,20 @@
                               </ul>
 
                         </div>
-                        <div class="about" style="margin-right:60px; cursor:pointer;"><a href=""
-                                    class="nav-link">ABOUT</a></div>
-                        <div class="settings" style=""><i class="fa-regular fa-bars"
-                                    style="color:#2c3b80;font-size:30px;cursor: pointer;"></i></div>
+
+                        <div class="notification" style="margin-right:60px; cursor:pointer;"><button
+                                    class="notification-bell-btn"><i class="fa-solid fa-bell fs-5"></i></button></div>
+
+                        <div class="settings">
+                              <i class="fa-regular fa-bars" style="color:#2c3b80;font-size:30px;cursor: pointer;"></i>
+                              <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                          <img src="profile-pic-url.jpg" alt="Profile Picture" class="profile-pic">
+                                          <span>Guest</span>
+                                    </div>
+                                    <a href="#" class="dropdown-item">Log Out</a>
+                              </div>
+                        </div>
                   </div>
             </nav>
       </header>
@@ -176,7 +187,7 @@
                                           <div class="item-status">Status: Lost</div>
                                           <div class="date-reported-text">Date: December 2,2024</div>
                                     </div>
-                                    
+
                               </div>
                         </div>
                         <a href="/Front-End/New-page/html/New-page.html" target="_blank" class="view-more-button-link">

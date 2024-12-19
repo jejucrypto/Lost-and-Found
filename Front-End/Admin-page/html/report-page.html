@@ -13,39 +13,51 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.1/css/all.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-              <div class="logo">
-                    <a href="/Front-End/Main-page/html/main-page.html"><img class="logo-image"
-                                src="/Front-End/Reference/ctu-danao-logo.png" alt="CTU-Logo">
-                    </a>
+      <header>
+            <nav class="navbar">
+                  <div class="logo">
+                        <a href="/Front-End/Main-page/html/main-page.html"><img class="logo-image"
+                                    src="/Front-End/Reference/ctu-danao-logo.png" alt="CTU-Logo">
+                        </a>
 
-                    <div>
-                          <p class="school-ctu">Cebu Technological University</p>
-                          <p class="school-ctu">Danao Campus</p>
-                    </div>
+                        <div>
+                              <p class="school-ctu">Cebu Technological University</p>
+                              <p class="school-ctu">Danao Campus</p>
+                        </div>
 
-              </div>
-              <div class="right-side-nav">
-                    <div class="home me-5"><a href="/Front-End/Main-page/html/main-page.html" class="nav-link">HOME</a></div>
+                  </div>
+                  <div class="right-side-nav">
+                        <div class="home me-5"><a href="/Front-End/Admin-page/html/admin-main-page.html" class="nav-link"><i class="fa-solid fa-house fs-5"></i></a>
+                        </div>
 
-                    <div class="items me-5"><a href="" class="nav-link">ITEMS &#x25BC;</a>
+                        <div class="items me-5"><a href="" class="nav-link">ITEMS &#x25BC;</a>
 
-                          <ul class="dropdown">
-                                <li><a href="/Front-End/New-page/html/New-page.html" target="_blank">New</a></li>
-                                <li><a href="/Front-End/Lost-page/html/Lost-page.html" target="_blank">Lost</a></li>
-                                <li><a href="/Front-End/Found-page/html/Found-page.html" target="_blank">Found</a>
-                                </li>
-                          </ul>
+                              <ul class="dropdown">
+                                    <li><a href="/Front-End/New-page/html/New-page.html" target="_blank">New</a></li>
+                                    <li><a href="/Front-End/Lost-page/html/Lost-page.html" target="_blank">Lost</a></li>
+                                    <li><a href="/Front-End/Found-page/html/Found-page.html" target="_blank">Found</a>
+                                    </li>
+                              </ul>
 
-                    </div>
-                    <div class="about" style="margin-right:60px; cursor:pointer;"><a href=""
-                                class="nav-link">ABOUT</a></div>
-                    <div class="settings" style=""><i class="fa-regular fa-bars"
-                                style="color:#2c3b80;font-size:30px;cursor: pointer;"></i></div>
-              </div>
-        </nav>
-  </header>
+                        </div>
+
+                        <div class="notification" style="margin-right:60px; cursor:pointer;"><button
+                                    class="notification-bell-btn"><i class="fa-solid fa-bell fs-5"></i></button></div>
+
+                        <div class="settings">
+                              <i class="fa-regular fa-bars" style="color:#2c3b80;font-size:30px;cursor: pointer;"></i>
+                              <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                          <img src="profile-pic-url.jpg" alt="Profile Picture" class="profile-pic">
+                                          <span>Admin</span>
+                                    </div>
+                                    <a href="/Front-End/Admin-page/html/report-page.html" class="dropdown-item">Report</a>
+                                    <a href="#" class="dropdown-item">Log Out</a>
+                              </div>
+                        </div>
+                  </div>
+            </nav>
+      </header>
 
     <div class="container">
         <h1 class="text-center">Report Form</h1>
@@ -71,7 +83,7 @@
             <label for="dateReported">Date Reported:</label>
             <input style="cursor: text;" type="date" id="dateReported" name="dateReported" required>
 
-            <button class="mt-4" type="submit">Submit</button>
+            <button class="mt-4 submit-btn" type="submit">Submit</button>
         </form>
 
         <!-- <h2>Previously Reported Items</h2>
