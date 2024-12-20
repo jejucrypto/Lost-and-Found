@@ -154,7 +154,7 @@ color: #282828;
     position: absolute;
     top: 0;
     left: -410px;
-    z-index: 2;
+    z-index: 998;
 }
 
 .notification-label {
