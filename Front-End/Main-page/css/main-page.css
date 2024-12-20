@@ -104,19 +104,102 @@ color: #282828;
 .items:hover .dropdown {
     display: block; /* Show dropdown on hover */
 }
+.notification{
+    position: relative;
+    margin-right:60px;
+}
 .notification-bell-btn {
+    position: relative;
     background: transparent; /* Make the button background transparent */
     border: none; /* Remove button border */
     cursor: pointer; /* Change cursor to pointer */
 }
-
+.notification-bell-btn .bell-badge{
+    color: white;
+    font-weight: bold;
+    background-color: red;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -2px;
+    right: -6px;
+}
 .notification-bell-btn i {
     color: white; /* Default color */
     transition: color 0.3s; /* Smooth transition for color change */
 }
+/* .notification .notification-container{
+    height: 500px;
+    width: 380px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: -390px;
+    z-index: 2;
+    
+} */
 
-.notification-bell-btn:hover i {
-    color: #282828; /* Change color on hover */
+.notification-container {
+    display: none;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    color: #282828;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: -410px;
+    z-index: 2;
+}
+
+.notification-label {
+    font-weight: bold;
+    margin: 10px;
+}
+
+.notification-content-container {
+    display: flex;
+    align-items: center;
+    padding: 10px ;
+    cursor: pointer;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box; 
+}
+.notification-content-container:hover {
+    background-color: #f0f0f0; 
+    width: 100%;
+}
+.notification-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.notification-content-item {
+    flex-grow: 1;
+}
+
+.notification-username {
+    font-weight: bold;
+}
+
+.notification-action {
+    margin: 0 5px;
+}
+
+.notification-content-daysPass {
+    font-size: 12px;
+}
+.notification-bell-btn i.active {
+    color: #282828; /* Change to your desired color */
 }
 
 /* FOR SETTINGS & DROPDOWN */
