@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Page</title>
+</head>
+<body>
+    <h1>User Information</h1>
+    <div id="userInfo"></div>
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        // Retrieve the data from localStorage
+        const name = localStorage.getItem("name");
+        const email = localStorage.getItem("email");
+
+        // Display the data
+        const userInfoDiv = document.getElementById("userInfo");
+        if (name && email) {
+            userInfoDiv.innerHTML = `<p>Name: ${name}</p><p>Email: ${email}</p>`;
+        } else {
+            userInfoDiv.innerHTML = "<p>No user information found.</p>";
+        }
+
+        // Function to go back to the form page
+        function goBack() {
+            window.location.href = "form.html";
+        }
+    </script>
+</body>
+</html>

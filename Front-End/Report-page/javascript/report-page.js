@@ -1,62 +1,3 @@
-function cardSwiper() {
-  new Swiper('.card-wrapper', {
-    loop: true,
-    spaceBetween: 30,
-
-    // Pagination bullets
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    // Responsive Breakpoints
-    breakpoints: {
-      0: {
-        slidesPerView: 1
-      },
-      768: {
-        slidesPerView: 2
-      },
-      1024: {
-        slidesPerView: 3
-      },
-    }
-  });
-}
-
-// FOR FULL DETAILS WHEN CLICKED THE CARD
-function fullDetails() {
-  const boxesContainers = document.querySelectorAll('.boxes-container');
-
-  // Add click event listener to each container
-  boxesContainers.forEach((container) => {
-    container.addEventListener('click', () => {
-      const overlay = document.getElementById('overlay');
-      if (overlay) {
-        overlay.style.display = 'flex';
-      }
-    });
-  });
-
-  // Close the full details of the card
-  const closeButton = document.getElementById('close');
-  if (closeButton) {
-    closeButton.addEventListener('click', () => {
-      const overlay = document.getElementById('overlay');
-      if (overlay) {
-        overlay.style.display = 'none';
-      }
-    });
-  }
-
-}
 function openNotification() {
   const notificationBellBtn = document.getElementById('notification-bell-btn');
   const notificationContainer = document.querySelector('.notification-container');
@@ -79,6 +20,7 @@ function openNotification() {
   });
 
 }
+
 function openSettings(){
     const settingsBtn = document.getElementById('settings-btn');
     const settingsDropdown = document.querySelector('.dropdown-content');
@@ -95,9 +37,20 @@ function openSettings(){
     });
 
 }
-document.addEventListener('DOMContentLoaded', openNotification);
 
-// Ensure the function runs after the DOM is fully loaded
-cardSwiper();
-fullDetails();
-openSettings();
+document.addEventListener('DOMContentLoaded', ()=>{
+  openNotification();
+  openSettings(); 
+  
+});
+
+
+
+
+
+
+
+
+
+
+

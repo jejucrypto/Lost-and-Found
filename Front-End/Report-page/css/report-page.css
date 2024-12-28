@@ -4,6 +4,9 @@
 
 * {
     font-family: 'Montserrat', sans-serif;  
+    padding: 0px;   
+    margin: 0px;
+    box-sizing: border-box;
 }
 a{
     text-decoration: none;
@@ -14,12 +17,13 @@ a{
     transition: 0.3s;
 }
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ededed74;
+    background: linear-gradient();
+    padding-top: 100px;
 }
 
 /* Header*/
@@ -30,6 +34,8 @@ header {
     width: 100%;
     z-index: 100;
 }
+
+/* Background */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -67,72 +73,159 @@ header {
     display: none; /* Hide dropdown by default */
     position: absolute; /* Position it absolutely */
     background-color: #f9a602; /* Background color of dropdown */
-    border: 1px solid #ccc; /* Border for dropdown */
+    border: 1px solid #ccc;
+/* Border for dropdown */
     list-style: none; /* Remove bullet points */
     padding: 0;  /* Remove padding */
     margin: 0; /* Remove margin */
-    z-index: 1000; /* Ensure it appears above other elements */
+    z-index: 1000;
+    right:-5px; /* Ensure it appears above other elements */
 }
 
-.dropdown li {
-    padding: 10px; /* Add padding to list items */
+.items-lost-button,.items-found-button{
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
 }
-
-.dropdown li a {
-    text-decoration: none; /* Remove underline from links */
-    color: #ffffff; /* Change text color */
-    transition: 0.5s;
-}
-.dropdown li a:hover {
-color: #282828;
+.items-lost-button:hover,.items-found-button:hover{
+    background-color: rgba(0, 0, 0, 0.247);
 }
 .items:hover .dropdown {
     display: block; /* Show dropdown on hover */
 }
+.notification{
+    position: relative;
+    margin-right:60px;
+}
 .notification-bell-btn {
+    position: relative;
     background: transparent; /* Make the button background transparent */
     border: none; /* Remove button border */
     cursor: pointer; /* Change cursor to pointer */
 }
-
+.notification-bell-btn .bell-badge{
+    color: white;
+    font-weight: bold;
+    background-color: red;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -2px;
+    right: -6px;
+}
 .notification-bell-btn i {
-    color: white; /* Default color */
-    transition: color 0.3s; /* Smooth transition for color change */
+    color: white;
+    transition: color 0.3s;
+}
+.notification-container {
+    display: none;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    color: #282828;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: -410px;
+    z-index: 998;
 }
 
-.notification-bell-btn:hover i {
-    color: #282828; /* Change color on hover */
+.notification-label {
+    font-weight: bold;
+    margin: 10px;
+}
+
+.notification-content-container {
+    display: flex;
+    align-items: center;
+    padding: 10px ;
+    cursor: pointer;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box; 
+}
+.notification-content-container:hover {
+    background-color: #f0f0f0; 
+    transition: background-color 0.3s ease;
+
+}
+.notification-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.notification-content-item {
+    flex-grow: 1;
+}
+
+.notification-username {
+    font-weight: bold;
+}
+
+.notification-action {
+    margin: 0 5px;
+}
+
+.notification-content-daysPass {
+    font-size: 12px;
+}
+.notification-bell-btn i.active {
+    color: #282828; /* Change to your desired color */
 }
 
 /* FOR SETTINGS & DROPDOWN */
 .settings {
     position: relative;
 }
+.settings .settings-btn{
+    border: none;
+    background: none;
+}
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #282828;
+    background-color: white;
+    color: black;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
     z-index: 1;
     right: 0;
-}
-
-.settings:hover .dropdown-content {
-    display: block;
+    border-radius:8px ;
+    
 }
 
 .dropdown-item {
+    cursor: pointer;
     padding: 12px 16px;
     text-decoration: none;
     display: flex;
     align-items: center;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+    border-radius:8px ;
     
 }
 
 .dropdown-item:hover {
-    background-color: #373737;
+    background-color: #f0f0f0; 
+    transition: background-color 0.3s ease;
+    border-radius:8px ;
+    
 }
 
 .profile-pic {
@@ -150,7 +243,6 @@ color: #282828;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  margin-top:400px;
 }
 
 h1, h2 {

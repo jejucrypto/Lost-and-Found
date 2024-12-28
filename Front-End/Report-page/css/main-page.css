@@ -82,24 +82,28 @@ header {
     display: none; /* Hide dropdown by default */
     position: absolute; /* Position it absolutely */
     background-color: #f9a602; /* Background color of dropdown */
-    border: 1px solid #ccc; /* Border for dropdown */
+    border: 1px solid #ccc;
+/* Border for dropdown */
     list-style: none; /* Remove bullet points */
     padding: 0;  /* Remove padding */
     margin: 0; /* Remove margin */
-    z-index: 1000; /* Ensure it appears above other elements */
+    z-index: 1000;
+    right:-5px; /* Ensure it appears above other elements */
 }
 
-.dropdown li {
-    padding: 10px; /* Add padding to list items */
+.items-lost-button,.items-found-button{
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
 }
-
-.dropdown li a {
-    text-decoration: none; /* Remove underline from links */
-    color: #ffffff; /* Change text color */
-    transition: 0.5s;
-}
-.dropdown li a:hover {
-color: #282828;
+.items-lost-button:hover,.items-found-button:hover{
+    background-color: rgba(0, 0, 0, 0.247);
 }
 .items:hover .dropdown {
     display: block; /* Show dropdown on hover */
@@ -129,20 +133,9 @@ color: #282828;
     right: -6px;
 }
 .notification-bell-btn i {
-    color: white; /* Default color */
-    transition: color 0.3s; /* Smooth transition for color change */
+    color: white;
+    transition: color 0.3s;
 }
-/* .notification .notification-container{
-    height: 500px;
-    width: 380px;
-    background-color: white;
-    position: absolute;
-    top: 0;
-    left: -390px;
-    z-index: 2;
-    
-} */
-
 .notification-container {
     display: none;
     background-color: #fff;
