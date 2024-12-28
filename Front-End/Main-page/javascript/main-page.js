@@ -74,32 +74,8 @@ function cardfullDetails() {
   //     });
   // }
 }
-//BELOW IS  FOR LOST AND FOUND
-function fullDetails() {
-  const boxesContainers = document.querySelectorAll('.boxes-container');
-  const closeButton = document.getElementById('close');
-  const overlay = document.getElementById('overlay');
-  // Add click event listener to each container
-  boxesContainers.forEach((container) => {
-    container.addEventListener('click', () => {
- 
-      if (overlay) {
-        overlay.style.display = 'flex';
-      }
-    });
-  });
 
-  // Close the full details of the card
-  if (closeButton) {
-    closeButton.addEventListener('click', () => {
-    
-      if (overlay) {
-        overlay.style.display = 'none';
-      }
-    });
-  }
 
-}
 
 
 function openNotification() {
@@ -165,36 +141,12 @@ function cardOpenMessage(){
   }
 }
 
-function openMessage(){
-  const messageBtn = document.getElementById('message-btn');
-  const messageOverlay = document.getElementById('message-overlay');
-  const messageCloseBtn = document.getElementById('close-btn-message-overlay');
 
-  messageOverlay.style.display = 'none';
-
-  messageBtn.addEventListener('click',()=>{
-        if(getComputedStyle(messageOverlay).display==='none'){
-            messageOverlay.style.display ='flex';
-        }else{
-            messageOverlay.style.display = 'none';
-        }
-  });
-
-  if(messageCloseBtn){
-      messageCloseBtn.addEventListener('click',()=>{
-        if(messageOverlay){
-          messageOverlay.style.display='none';
-        }  
-      });
-  }
-}
 
 // Ensure the function runs after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', ()=>{
   cardSwiper();
-  fullDetails();
   openNotification();
-  openMessage();
   openSettings(); 
   cardfullDetails();
   cardOpenMessage()

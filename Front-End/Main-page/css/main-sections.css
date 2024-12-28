@@ -60,6 +60,7 @@
   gap: 20px;
   grid-template-rows: repeat(2, auto);
   position: relative;
+
 }
 
 .txt-container {
@@ -133,7 +134,6 @@
 }
 
 /* Design of Full-details wil display */
-
 .overlay {
   display: none;
   /* Initially hidden */
@@ -231,7 +231,7 @@
 
 /* FOR MESSAGE CONTAINER */
 .message-overlay {
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: column;
   /* Initially hidden */
@@ -242,8 +242,11 @@
   position: fixed;
   top: 60px;
   left: 270px;
+  z-index: 10000;
 }
-
+#message-overlay{
+  display: none;
+}
 .message-overlay .message-design-top {
   display: flex;
   align-items: center;
