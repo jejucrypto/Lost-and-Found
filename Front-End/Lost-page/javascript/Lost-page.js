@@ -1,30 +1,6 @@
 
 // FOR FULL DETAILS WHEN CLICKED THE CARD
-function fullDetails() {
-  const boxesContainers = document.querySelectorAll('.boxes-container');
 
-  // Add click event listener to each container
-  boxesContainers.forEach((container) => {
-    container.addEventListener('click', () => {
-      const overlay = document.getElementById('overlay');
-      if (overlay) {
-        overlay.style.display = 'flex';
-      }
-    });
-  });
-
-  // Close the full details of the card
-  const closeButton = document.getElementById('close');
-  if (closeButton) {
-    closeButton.addEventListener('click', () => {
-      const overlay = document.getElementById('overlay');
-      if (overlay) {
-        overlay.style.display = 'none';
-      }
-    });
-  }
-
-}
 function openNotification() {
   const notificationBellBtn = document.getElementById('notification-bell-btn');
   const notificationContainer = document.querySelector('.notification-container');
@@ -66,6 +42,5 @@ function openSettings(){
 
 document.addEventListener('DOMContentLoaded',()=>{
   openSettings();
-  fullDetails();
   openNotification();
 });
