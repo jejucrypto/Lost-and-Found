@@ -87,33 +87,88 @@
   font-weight: 600;
 }
 
+/* Container Styling */
+/* Container Styling */
 .boxes-container {
-  background-color: #282828;
-  border-radius: 10px;
+  background-color: #282828; /* Dark background for contrast */
+  border-radius: 15px; /* Slightly more rounded corners */
   margin-right: 10px;
   height: 350px;
   width: 300px;
-  color: white;
-  padding: 10px 15px;
+  color: white; /* White text */
+  padding: 20px; /* Increased padding for better spacing */
   cursor: pointer;
   transition: 0.3s;
-  display: flex; /* Center content */
-  flex-direction: column; /* Stack items vertically */
+  display: flex;
+  flex-direction: column;
   justify-content: center; /* Center content vertically */
+  align-items: flex-start; /* Align items to the left */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  border: 2px solid transparent; /* Transparent border for hover effect */
 }
 
+/* Hover Effect */
 .boxes-container:hover {
-  border: 2px solid #F9A602;
-  transition: 0.3s;
+  border: 2px solid #F9A602; /* Theme color border on hover */
+  background-color: #1E1E1E; /* Darker background for better text contrast */
+  transform: scale(1.02); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
 
-.boxes-container .item-lost-name {
-  font-size: 40px;
-  font-weight: 500;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  text-align: center;
+/* Item Lost Text Styling */
+.item-lost-txt {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff; /* Theme color */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Spacing between letters */
+  margin-bottom: 10px; /* Space below the text */
+  align-self: flex-start; /* Move "Item Lost" to the right side */
+  margin-right: 10px; /* Add some spacing from the edge */
 }
+
+/* Item Lost Name Styling */
+.boxes-container .item-lost-name {
+  font-size: 35px; /* Large font size */
+  font-weight: 500; /* Medium font weight */
+  color: #ffffff; /* Theme color */
+  text-align: center;
+  margin: 70px 0; /* Adjusted margins to prevent overlap */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow */
+  width: 100%;
+   /* Ensure it spans the full width */
+}
+
+/* Item Status Styling */
+.item-status {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff; /* Theme color */
+  margin-bottom: 10px; /* Space below the text */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  padding: 5px 10px; /* Padding for background */
+  border-radius: 5px; /* Rounded corners */
+  width: 100%; /* Ensure it spans the full width */
+}
+
+/* Date Reported Text Styling */
+.date-reported-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff; /* Theme color */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  padding: 5px 10px; /* Padding for background */
+  border-radius: 5px; /* Rounded corners */
+  width: 100%; /* Ensure it spans the full width */
+}
+.boxes-container:hover .item-lost-txt,
+.boxes-container:hover .item-lost-name,
+.boxes-container:hover .item-status,
+.boxes-container:hover .date-reported-text {
+  color: #F9A602; /* Theme color */
+  /* White text on hover */
+}
+
 .line {
   height: 25px;
   width: 5px;

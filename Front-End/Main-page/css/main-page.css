@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient();
+  
 }
 
 /* Header*/
@@ -35,15 +35,89 @@ header {
 }
 
 /* Background */
-.background-ctu{
-    background: url(/Front-End/Reference/ctu-danao-campus.jpg) no-repeat;
-    background-size: 100% 63%;
-    background-position: top;
-    width: 100%;
-    height: 63%;
+.background-ctu {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url(/Front-End/Reference/ctu-danao-campus.jpg) no-repeat;
+    background-size: 110%;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative; /* For overlay and absolute positioning */
+    overflow: hidden; /* Ensures no overflow from child elements */
+    margin-bottom: 50px;
+}
+
+/* Overlay for better text visibility */
+.background-ctu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+/* Centered Title Design */
+.background-ctu h1 {
+    position: relative; /* Ensures it stays above the overlay */
+    z-index: 2; /* Places text above the overlay */
+    font-size: 4rem; /* Large font size */
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+    letter-spacing: 0.2rem; /* Adds spacing between letters */
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+/* Subtitle or Tagline */
+.background-ctu p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+    animation: slideIn 2s ease-in-out; /* Slide-in animation */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Optional: Add a decorative border or shape */
+.background-ctu::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: white;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adds a glowing effect */
 }
 .navbar {
     display: flex;
