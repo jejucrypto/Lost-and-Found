@@ -1,10 +1,11 @@
 function displayAndHandleReportedItems() {
-    const foundSection = document.getElementById("foundSection");
+    const lostSection = document.getElementById("lostSection");
     const fullDetails = document.getElementById('overlay-content');
     const overlay = document.getElementById('overlay');
 
 
-    foundSection.innerHTML = ""; // Clear existing items
+    lostSection.innerHTML = "";
+ // Clear existing items
     fullDetails.innerHTML = "";
 
     // Retrieve reports from localStorage
@@ -13,7 +14,7 @@ function displayAndHandleReportedItems() {
     // Loop through each report and create a box for it
     reports.forEach(report => {
         // If the status is Lost
-        if (report.itemType === 'found') { // If the status is Found
+        if (report.itemType === 'lost') {
             let html = `
             <div class="boxes-container" data-item-name="${report.itemName}" data-report='${JSON.stringify(report)}'>
                 <div class="item-lost-txt">Item Lost:</div>
@@ -22,8 +23,8 @@ function displayAndHandleReportedItems() {
                 <div class="date-reported-text">Date Reported: ${report.dateReported}</div>
             </div>
             `;
-            foundSection.innerHTML += html;
-        }
+            lostSection.innerHTML += html;
+        } 
     });
 
     // Add click event listener to each container || it will open the FULL DETAILS
@@ -76,14 +77,14 @@ function displayAndHandleReportedItems() {
                                             <i class="fa-solid fa-arrow-left fa-xl"></i>
                                         </button>
                                     </div>
-                                    <img src="/Front-End/Reference/ctu-danao-campus.jpg" class="message-user-profile">
+                                    <img src="/Reference/ctu-danao-campus.jpg" class="message-user-profile">
                                     <div class="message-user-name fw-bold fs-6">User  Name</div>
                                 </div>
                                 <div class="message-chat-container">
                                      <!-- USER1  RIGHT SIDE -->
                                                       <div class="chat-container-inner">
-                                                            <div class="user-chat-container">
-                                                                  <img src="/Front-End/Reference/ctu-danao-campus.jpg"
+                                                            <div class="user-chat-container ">
+                                                                  <img src="/Reference/ctu-danao-campus.jpg"
                                                                         class="user-chat-profile">
                                                                   <div class="user-chat-container-content-outer">
                                                                         <p class="user-chat-name">Jiji De Guzaro
@@ -95,7 +96,7 @@ function displayAndHandleReportedItems() {
                                                             </div>
                                                       </div>
                                                       <!--  USER2 LEFT SIDE -->
-                                                      <div class="chat-container-inner">
+                                                      <div class="chat-container-inner chat-container-inner-user2">
                                                             <div class="user-chat-container">
                                                                   <div class="user-chat-container-content-outer"
                                                                         style="align-items: flex-end;">
@@ -106,7 +107,7 @@ function displayAndHandleReportedItems() {
                                                                               </p>
                                                                         </div>
                                                                   </div>
-                                                                  <img src="/Front-End/Reference/ctu-danao-logo.png"
+                                                                  <img src="/Reference/ctu-danao-logo.png"
                                                                         class="user-chat-profile"
                                                                         style=" margin-left:15px;">
                                                             </div>
@@ -148,4 +149,5 @@ function displayAndHandleReportedItems() {
         });
     });
 }
+
 window.onload = displayAndHandleReportedItems;

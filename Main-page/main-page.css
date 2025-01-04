@@ -39,7 +39,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(/Front-End/Reference/ctu-danao-campus.jpg) no-repeat;
+    background: url(/Reference/ctu-danao-campus.jpg) no-repeat;
     background-size: 110%;
     background-position: center;
     width: 100%;
@@ -56,69 +56,63 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height:100%;
+    height:110%;
     background: rgba(0, 0, 0, 0.5); /* Dark overlay */
     z-index: 1;
 }
 
 /* Centered Title Design */
+/* Centered Title Design */
 .background-ctu h1 {
-    position: relative; /* Ensures it stays above the overlay */
-    z-index: 2; /* Places text above the overlay */
-    font-size: 4rem; /* Large font size */
+    position: relative;
+    z-index: 2;
+    font-size: 5rem; /* Larger font size */
     font-weight: bold;
-    color: white;
+    color: #ffffff;
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
-    letter-spacing: 0.2rem; /* Adds spacing between letters */
+    letter-spacing: 0.3rem; /* Adds spacing between letters */
     animation: fadeIn 2s ease-in-out; /* Fade-in animation */
-}
-
+  }
 /* Subtitle or Tagline */
 .background-ctu p {
     position: relative;
     z-index: 2;
-    font-size: 1.5rem;
-    color: white;
-    margin-top: 1rem;
+    font-size: 1.8rem; /* Slightly larger font size */
+    color: #fff; /* White text color */
+    margin-top: 1.5rem;
     text-align: center;
+    background: linear-gradient(45deg, #ffc400, #fad0c4); /* Gradient text color */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     animation: slideIn 2s ease-in-out; /* Slide-in animation */
-}
+  }
+  
 
 /* Fade-in Animation */
 @keyframes fadeIn {
     from {
-        opacity: 0;
+      opacity: 0;
+      transform: translateY(-20px);
     }
     to {
-        opacity: 1;
+      opacity: 1;
+      transform: translateY(0);
     }
-}
-
-/* Slide-in Animation */
-@keyframes slideIn {
+  }
+  
+  /* Slide-in Animation */
+  @keyframes slideIn {
     from {
-        transform: translateY(50px);
-        opacity: 0;
+      transform: translateY(50px);
+      opacity: 0;
     }
     to {
-        transform: translateY(0);
-        opacity: 1;
+      transform: translateY(0);
+      opacity: 1;
     }
-}
+  }
 
-/* Optional: Add a decorative border or shape */
-.background-ctu::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    background: white;
-    z-index: 2;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adds a glowing effect */
-}
 .navbar {
     display: flex;
     justify-content: space-between;
