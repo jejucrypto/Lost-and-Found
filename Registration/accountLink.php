@@ -17,6 +17,7 @@ if (isset($_POST['signUp'])) {
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
     $confirm_password = $_POST['confirm_password'] ?? '';
+    $role = 'user';
 
     // Input validation
     if (empty($name) || empty($email) || empty($password)) {
@@ -25,16 +26,15 @@ if (isset($_POST['signUp'])) {
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         die("Invalid email format.");
     }
-    //if($password !== $confirm_password) {
-    //    die("Passwords do not match!");
-    //}
+    //if ($password !== $confirm_password) {
+    //   echo "Passwords do not match.";
+    //    exit; }
     if(strlen($password) < 8 || !preg_match('/\d/', $password)) {
         die("Password must be at least 8 characters long and have at least 1 number!");
     }
 
 
     $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-
     // Check if email already exists
     $sql_check = "SELECT id FROM userdetails WHERE email = ?";
     $stmt_check = $conn->prepare($sql_check);
@@ -48,9 +48,9 @@ if (isset($_POST['signUp'])) {
     $stmt_check->close();
 
     // Insert new user
-    $sql = "INSERT INTO userdetails (name, email, hashed_password) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO userdetails (name, email, hashed_password, roles) VALUES (?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sss", $name, $email, $hashed_password);
+    $stmt->bind_param("ssss", $name, $email, $hashed_password, $role);
 
     if ($stmt->execute()) {
         echo "Sign-up successful! <a href='/Lost-and-Found/Main-page/main-page.html'>Click to continue...</a>";
@@ -80,7 +80,9 @@ if (isset($_POST['signIn'])) {
         if (password_verify($password, $row['hashed_password'])) {
             session_start();
             $_SESSION['email'] = $row['email'];
-            echo "Login successful! <a href='/Lost-and-Found/Main-page/main-page.html'>Click here to continue...</a>";
+//            $_SESSION['user_id'] = $user['id'];
+//            $_SESSION['role'] = $user['role'];
+            header("Location: /Lost-and-Found/Main-page/main-page.html");
         } else {
             echo "Incorrect password. <a href='login.html'>Please try again!</a>";
         }
